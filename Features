@@ -1,0 +1,6 @@
+@LoginTest
+Feature: login functionality of Application 
+Scenario: login function
+ Given open e-commerce application
+ When user name and password entered
+ Then login page should display
