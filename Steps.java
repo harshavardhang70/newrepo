@@ -8,8 +8,8 @@ import cucumber.api.java.en.When;
 
 public class Steps {
 	public WebDriver driver;
-	@Given("^Open the Firefox and launch the application$")
-	public void Open_the_Firefox_and_launch_the_application()throws Throwable
+	@Given("^Open the Browser$")
+	public void Open_the_and_launch_the_application()throws Throwable
 	{
 		System.setProperty("webdriver.edge.driver", "C:\\selenium\\edgedriver_win32\\msedgedriver.exe");
 		driver = new EdgeDriver();
@@ -31,8 +31,8 @@ public class Steps {
 		Thread.sleep(1500);
 	}
 	
-	@When("^Reset the credential$")
-	public void Reset_the_credential() throws Throwable {
+	@When("^Close the application$")
+	public void Close_the_application() throws Throwable {
 		driver.close();
 		System.out.println("driver closed");
 		
@@ -40,3 +40,4 @@ public class Steps {
 
 
 }
+    
