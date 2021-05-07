@@ -41,7 +41,16 @@ public class Exp {
 		
 		Actions action =new Actions(driver);
 		action.moveToElement(Fashion).perform();
+		
 		Thread.sleep(1500);
+		
+		driver.findElement(By.xpath("/html/body/div[1]/header/div/div[3]/div[2]/div[2]/div/div[2]/a[13]/span")).click();
+		
+		
+		
+		
+		
+		
 		
 		WebElement Electronics = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/div/div[5]/a/div[1]/div/img"));
 		action.moveToElement(Electronics).perform();

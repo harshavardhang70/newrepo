@@ -1,5 +1,8 @@
 package StepDefinition;
+import java.util.ArrayList;
+
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import cucumber.api.java.en.Given;
@@ -25,8 +28,32 @@ public class Steps {
 		
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")).sendKeys("7032394341");
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).sendKeys("wrong password");
-		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button/span")).click();
+		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[4]/button")).click();
+		Thread.sleep(1500);
+
 		
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input")).sendKeys("prince of persia sands of time");
+		Thread.sleep(1500);
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/form/div/button")).click();
+		Thread.sleep(1500);
+		
+		driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[2]/div[2]/div/div[1]/div/a[2]")).click();
+		
+		
+		ArrayList<String> ala = new ArrayList<String>(driver.getWindowHandles());
+		Thread.sleep(1500);
+		
+		for (int i = 0; i < ala.size(); i++)
+	          System.out.println(ala.get(i) + " ");
+			Thread.sleep(1500);
+			
+			driver.switchTo().window(ala.get(ala.size()-1));
+			
+			System.out.println(driver.getTitle());
+			Thread.sleep(1500);Thread.sleep(1500);
+			
+			driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[2]/form/button")).click();
+
 		System.out.println("username password");
 		Thread.sleep(1500);
 	}
