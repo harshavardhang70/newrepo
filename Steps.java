@@ -53,6 +53,8 @@ public class Steps {
 			Thread.sleep(1500);Thread.sleep(1500);
 			
 			driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[2]/form/button")).click();
+			
+			Thread.sleep(1500);Thread.sleep(1500);
 
 		System.out.println("username password");
 		Thread.sleep(1500);
@@ -60,7 +62,7 @@ public class Steps {
 	
 	@When("^Close the application$")
 	public void Close_the_application() throws Throwable {
-		driver.close();
+		driver.quit();
 		System.out.println("driver closed");
 		
 	}

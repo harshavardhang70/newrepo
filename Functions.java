@@ -1,6 +1,7 @@
 package pom_framework;
 
 import org.openqa.selenium.edge.EdgeDriver;
+
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.interactions.Actions;
@@ -80,6 +81,13 @@ Select dropdown = new Select(driver.findElement(By.xpath("/html/body/div[1]/head
 		driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/div[2]/div/div[3]/span/div/span/div/div/div[2]/ul/li/span/a/div/label/i")).click();
 		Thread.sleep(1500);	
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 public void mouseover() throws Exception {
